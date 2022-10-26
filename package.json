@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "moleculer-runner -e --repl --hot -c config/config.js **/*.db.js **/*.service.js **/*.gateway.js",
+    "start": "moleculer-runner -c config/config.js --instances=4 **/*.db.js **/*.service.js **/*.gateway.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "moleculer": "^0.14.24",
+    "moleculer-db": "^0.8.19",
+    "moleculer-db-adapter-sequelize": "^0.2.15",
+    "moleculer-repl": "^0.7.3",
+    "moleculer-web": "^0.10.4",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3",
+    "sqlite3": "^5.1.2"
+  }
+}
