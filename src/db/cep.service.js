@@ -4,13 +4,13 @@ const Sequelize = require("sequelize");
 
 
 module.exports = {
-    name: "recepcao.db.cpf",
+    name: "recepcao.db.cep",
 
     mixins: [DbService], 
     adapter: new SqlAdapter(process.env.DB_URL),
     
     model: {
-        name: 'cpf',
+        name: 'cep',
         define: {
             id: { 
                 type: Sequelize.INTEGER,
@@ -28,7 +28,7 @@ module.exports = {
             cd_fonet: Sequelize.STRING,
         },
         options: {
-            tableName: 'cpf',
+            tableName: 'cep',
             timestamps: false,
         }
     }

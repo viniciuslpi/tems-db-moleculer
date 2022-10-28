@@ -4,33 +4,28 @@ const Sequelize = require("sequelize");
 
 
 module.exports = {
-    name: "recepcao.db.atendimento",
+    name: "recepcao.db.entidade",
 
     mixins: [DbService], 
     adapter: new SqlAdapter(process.env.DB_URL),
     
     model: {
-        name: 'atendimento',
+        name: 'entidade',
         define: {
             id: { 
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
-            data: Sequelize.DATE,
-            evento_id: Sequelize.INTEGER,
-            primeira_vez: Sequelize.INTEGER,
+            nome: Sequelize.STRING,
+            linha_id: Sequelize.INTEGER,
+            data_inicio_casa: Sequelize.STRING,
             pessoa_id: Sequelize.INTEGER,
-            problema_id: Sequelize.INTEGER,
-            tipo_id: Sequelize.INTEGER, 
-            entidade_id: Sequelize.INTEGER, 
-            urgencia: Sequelize.INTEGER, 
-            observacao: Sequelize.STRING, 
-            senha_id: Sequelize.INTEGER, 
-            periodo: Sequelize.STRING
+            biografia: Sequelize.STRING,
+            ativa: Sequelize.INTEGER
         },
         options: {
-            tableName: 'atendimento',
+            tableName: 'entidade',
             timestamps: false,
         }
     }
