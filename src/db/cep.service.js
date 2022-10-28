@@ -4,26 +4,31 @@ const Sequelize = require("sequelize");
 
 
 module.exports = {
-    name: "recepcao.db.senha",
+    name: "recepcao.db.cpf",
 
     mixins: [DbService], 
     adapter: new SqlAdapter(process.env.DB_URL),
     
     model: {
-        name: 'senha',
+        name: 'cpf',
         define: {
             id: { 
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
-            data_atendimento: Sequelize.DATE,
-            entidade_id: Sequelize.INTEGER,
-            proxima: Sequelize.INTEGER,
-            periodo_atendimento: Sequelize.STRING
+            cd_cep: Sequelize.STRING,
+            tp_logradouro: Sequelize.STRING,
+            nm_logradouro: Sequelize.STRING,
+            mm_cidade: Sequelize.STRING,
+            nm_bairro_inicio: Sequelize.STRING,
+            nm_bairro_fim: Sequelize.STRING,
+            uf: Sequelize.STRING,
+            dh_atualizacao: Sequelize.DATE,
+            cd_fonet: Sequelize.STRING,
         },
         options: {
-            tableName: 'senha',
+            tableName: 'cpf',
             timestamps: false,
         }
     }
