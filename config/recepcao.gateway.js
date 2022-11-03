@@ -15,6 +15,9 @@ module.exports = {
 
                 aliases: {
                     "GET /:id":"recepcao.service.pessoa.get",
+                    "GET /": "recepcao.service.pessoa.list",
+                    "POST /": "recepcao.service.pessoa.create",
+
                 }
 
             }

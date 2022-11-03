@@ -23,17 +23,17 @@ module.exports = {
             return await ctx.call("recepcao.db.pessoa.get", { id });
         },
         
-
-        list() {
-
+        async list(ctx) {
+            return await ctx.call("recepcao.db.pessoa.list");
         },
 
-        create() {
-
+        async create(ctx) {
+            console.log(ctx.params);
+            return await ctx.call("recepcao.db.pessoa.create", ctx.params);
         },
 
         update() {
-
+            
         },
 
         delete() {
