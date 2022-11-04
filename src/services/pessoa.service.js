@@ -19,8 +19,7 @@ module.exports = {
         },
 
         async get(ctx) {
-            let { id } = ctx.params;
-            return await ctx.call("recepcao.db.pessoa.get", { id });
+            return await ctx.call("recepcao.db.pessoa.get", ctx.params);
         },
         
         async list(ctx) {
@@ -28,16 +27,15 @@ module.exports = {
         },
 
         async create(ctx) {
-            console.log(ctx.params);
             return await ctx.call("recepcao.db.pessoa.create", ctx.params);
         },
 
-        update() {
-            
+        async update(ctx) {
+            return await ctx.call("recepcao.db.pessoa.update", ctx.params);
         },
 
-        delete() {
-
+        async delete(ctx) {
+            return await ctx.call("recepcao.db.pessoa.remove", ctx.params);
         }
 
     }
