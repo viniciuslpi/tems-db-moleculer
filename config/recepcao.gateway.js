@@ -11,7 +11,7 @@ module.exports = {
         routes: [
             {
                 path:'/pessoas',
-                whitelist: ["recepcao.service.pessoa.*"],
+                whitelist: ["recepcao.service.pessoa.*",],
 
                 aliases: {
                     "GET /:id":"recepcao.service.pessoa.get",
@@ -31,6 +31,24 @@ module.exports = {
                     "POST /": "recepcao.service.senha.create",
                     "PUT /:id": "recepcao.service.senha.update",
                     // "DELETE /:id": "recepcao.service.pessoa.delete"
+                }
+            },
+            {
+                path:'/atendimentos',
+                whitelist: ["recepcao.service.atendimento.*"],
+
+                aliases: {
+                    "POST /":"recepcao.service.atendimento.create",
+                    "GET /:id":"recepcao.service.atendimento.findByPessoaId"
+                }
+
+            },
+            {
+                path:'/cep',
+                whitelist: ["recepcao.service.cep.*"],
+
+                aliases: {
+                    "GET /:codigo":"recepcao.service.cep.get",
                 }
             }
         ]

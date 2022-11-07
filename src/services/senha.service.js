@@ -1,5 +1,4 @@
 const { Op } = require("sequelize");
-const sequelize = require("sequelize");
 
 module.exports = {
     name: "recepcao.service.senha",
