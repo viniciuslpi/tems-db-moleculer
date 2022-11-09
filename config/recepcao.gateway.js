@@ -14,7 +14,8 @@ module.exports = {
                 whitelist: ["recepcao.service.pessoa.*",],
 
                 aliases: {
-                    "GET /:id":"recepcao.service.pessoa.get",
+                    "GET /:name": "recepcao.service.pessoa.findByName",
+                    // "GET /:id":"recepcao.service.pessoa.get",
                     "GET /": "recepcao.service.pessoa.list",
                     "POST /": "recepcao.service.pessoa.create",
                     "PUT /:id": "recepcao.service.pessoa.update",
