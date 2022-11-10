@@ -40,7 +40,7 @@ module.exports = {
 
                 aliases: {
                     "POST /":"recepcao.service.atendimento.create",
-                    "GET /:id":"recepcao.service.atendimento.findByPessoaId"
+                    "GET /:id":"recepcao.service.atendimento.get"
                 }
 
             },
