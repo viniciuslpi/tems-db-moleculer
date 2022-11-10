@@ -51,6 +51,14 @@ module.exports = {
                 aliases: {
                     "GET /:codigo":"recepcao.service.cep.get",
                 }
+            },
+            {
+                path:'/entidades',
+                whitelist: ["recepcao.service.entidade.*"],
+
+                aliases: {
+                    "GET /":"recepcao.service.entidade.get",
+                }
             }
         ]
     }
