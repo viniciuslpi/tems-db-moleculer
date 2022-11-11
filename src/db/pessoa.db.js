@@ -17,7 +17,7 @@ module.exports = {
                 primaryKey: true,
                 autoIncrement: true
             },
-            label: Sequelize.STRING,
+            nome: Sequelize.STRING,
             logradouro: Sequelize.STRING,
             numero: Sequelize.STRING,
             complemento: Sequelize.STRING,

@@ -10,7 +10,7 @@ module.exports = {
             let { nome } = ctx.params;
             let pessoas = await ctx.call("recepcao.db.pessoa.find", { 
                 query: {
-                    label: { 
+                    nome: { 
                         [Op.like]: `%${nome}%`
                     }
                 }
