@@ -14,8 +14,8 @@ module.exports = {
                 whitelist: ["recepcao.service.pessoa.*",],
 
                 aliases: {
-                    "GET /:name": "recepcao.service.pessoa.findByName",
-                    // "GET /:id":"recepcao.service.pessoa.get",
+                    "GET /nome/:nome": "recepcao.service.pessoa.findByName",
+                    "GET /:id":"recepcao.service.pessoa.get",
                     "GET /": "recepcao.service.pessoa.list",
                     "POST /": "recepcao.service.pessoa.create",
                     "PUT /:id": "recepcao.service.pessoa.update",
@@ -39,8 +39,9 @@ module.exports = {
                 whitelist: ["recepcao.service.atendimento.*"],
 
                 aliases: {
-                    "POST /":"recepcao.service.atendimento.create",
-                    "GET /:id":"recepcao.service.atendimento.get"
+                    "POST /": "recepcao.service.atendimento.create",
+                    "GET /:id":"recepcao.service.atendimento.get",
+                    "PUT /:id": "recepcao.service.atendimento.update"
                 }
 
             },

@@ -24,5 +24,10 @@ module.exports = {
         async create(ctx) {
             return await ctx.call("recepcao.db.atendimento.create", ctx.params);
         },
+
+        async update(ctx) {
+            ctx.meta.$statusCode = 204;
+            return await ctx.call("recepcao.db.atendimento.update", ctx.params);
+        },
     }
 }

@@ -7,11 +7,11 @@ module.exports = {
         // get(`/api/pessoas?filter[fields][id]=true&filter[fields][nome]=true&filter[where][nome][regexp]=/${val}.*/gi`)
         
         async findByName(ctx) {
-            let { name } = ctx.params;
+            let { nome } = ctx.params;
             let pessoas = await ctx.call("recepcao.db.pessoa.find", { 
                 query: {
                     label: { 
-                        [Op.like]: `%${name}%`
+                        [Op.like]: `%${nome}%`
                     }
                 }
             });
