@@ -58,7 +58,7 @@ module.exports = {
                 whitelist: ["recepcao.service.entidade.*"],
 
                 aliases: {
-                    "GET /":"recepcao.service.entidade.get",
+                    "GET /":"recepcao.service.entidade.list",
                 }
             }
         ]
